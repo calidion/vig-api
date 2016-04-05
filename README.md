@@ -1,0 +1,2 @@
+# egg
+egg api rules
