@@ -5,6 +5,14 @@
 Egg API is a simple api rule for http based api design.   
 Egg API is to reduce complexity Restful Api introduced.
 
+RESTful API problems:  
+1. Complexity. There are at least five methods you should be handling.  
+2. None productive. We must decide every time if we should use PUT/POST, where we need an eat/paint.  
+3. None accurate. HTTP Methods is limited and none extensible, so the method can not be accurate for apis.  
+4. None descriptive. Restful API somethings can be too simple to understand.  
+
+Rules:
+
 1. Egg API uses HTTP GET/POST as the primary methods.
 2. GET mehtod for data retrieving from server.
 3. POST method for data sending to server.
