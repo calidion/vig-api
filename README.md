@@ -57,5 +57,5 @@ Rules:
     | message | error message|
     | data | return data |
 
-11. Error code is primarily defined by [errorable](https://github.com/calidion/errorable) and it's library [common](https://github.com/Errorable/common).
+11. Error code can be defined by [errorable](https://github.com/calidion/errorable) and it's library [common](https://github.com/Errorable/common).
 
