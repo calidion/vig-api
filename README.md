@@ -6,12 +6,12 @@ Egg API is a simple api rule for http based api design.
 Egg API is to reduce complexity Restful Api introduced.
 
 1. Egg API uses HTTP GET/POST as the primary methods.
-2. GET mehtod for Data retrieving from server.
-3. POST method for Data sending to server.
+2. GET mehtod for data retrieving from server.
+3. POST method for data sending to server.
 4. Any API using GET method will not change any data of the user.
 5. Any API using POST method will change the state, info or data of the user.
 6. All APIs using GET method will start with a noun, like user/admin.  
-  * simply a noun indicates that you want to retrieve all data  
+  * a simple noun indicates that you want to retrieve all data  
   
     > GET /user  
   * default page limit is 20, if you want to change this limit, specify a value to limit, limit is only valid here.  
@@ -23,7 +23,7 @@ Egg API is to reduce complexity Restful Api introduced.
   * page & limit can be combined as get parameter 
   
     > GET /user?page=5&limit=50  
-  * followed a number or id to get a single item, limit will have no effect here, and be ignored.  
+  * followed a number or id to get a single item, key limit will have no effect here, and be ignored.  
   
     > GET /user/1  
     > GET /user/1?limit=50 
