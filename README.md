@@ -1,4 +1,7 @@
-# Egg API: an simple api for nodejs
+[[English Version](https://github.com/calidion/egg/edit/master/README.md)]
+[[中文版](https://github.com/calidion/egg/edit/master/README.zh-CN.md)]
+
+# Egg API: a simple api for nodejs
 Egg API is a simple api rule for http based api design.   
 Egg API is to reduce complexity Restful Api introduced.
 
