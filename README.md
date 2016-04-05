@@ -9,7 +9,7 @@ RESTful API problems:
 1. Complexity. There are at least five methods you should be handling.  
 2. None productive. We must decide every time if we should use PUT/POST, where we need an eat/paint.  
 3. None accurate. HTTP Methods is limited and none extensible, so the method can not be accurate for apis.  
-4. None descriptive. Restful API somethings can be too simple to understand.  
+4. None descriptive. Restful API sometimes can be too simple to understand.  
 
 Rules:
 
