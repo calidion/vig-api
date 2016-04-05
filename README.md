@@ -1,5 +1,5 @@
-[[English Version](https://github.com/calidion/egg/edit/master/README.md)]
-[[中文版](https://github.com/calidion/egg/edit/master/README.zh-CN.md)]
+[[English Version](https://github.com/calidion/egg/master/README.md)]
+[[中文版](https://github.com/calidion/egg/master/README.zh-CN.md)]
 
 # Egg API: a simple api for nodejs
 Egg API is a simple api rule for http based api design.   
@@ -12,14 +12,19 @@ Egg API is to reduce complexity Restful Api introduced.
 5. Any API using POST method will change the state, info or data of the user.
 6. All APIs using GET method will start with a noun, like user/admin.  
   * simply a noun indicates that you want to retrieve all data  
+  
     > GET /user  
   * default page limit is 20, if you want to change this limit, specify a value to limit, limit is only valid here.  
+  
     > GET /user?limit=50  
   * default page number is 1, if you want to change page number, specify a value to page.  
+  
     > GET /user?page=5  
   * page & limit can be combined as get parameter 
+  
     > GET /user?page=5&limit=50  
   * followed a number or id to get a single item, limit will have no effect here, and be ignored.  
+  
     > GET /user/1  
     > GET /user/1?limit=50 
 
