@@ -1,5 +1,5 @@
 # Egg API
-Egg API is a simpler api rule for http based api design.
+Egg API is a simpler api rule for http based api design.   
 Egg API is to reduce complexity Restful Api introduced.
 
 1. Egg API use HTTP GET/POST as the primary Method.
