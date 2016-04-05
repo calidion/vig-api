@@ -1,4 +1,4 @@
-# Egg API
+# Egg API: an simple api for nodejs
 Egg API is a simple api rule for http based api design.   
 Egg API is to reduce complexity Restful Api introduced.
 
@@ -44,7 +44,7 @@ Egg API is to reduce complexity Restful Api introduced.
 11. Error code is primarily defined by [errorable](https://github.com/calidion/errorable) and it's library [common](https://github.com/Errorable/common).
 
 
-# 蛋蛋 API
+# 蛋蛋 API: 一个Nodejs的简单API规范
 蛋蛋API是一个更简单的基于HTTP的API规则。
 蛋蛋API的目标是降低RESTful API的复杂性
 
