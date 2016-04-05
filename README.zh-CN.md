@@ -13,13 +13,13 @@
 6. 所有使用GET方法的API必须以英文名词开关，比如user/admin.  
   * 只写一个名词表示你需要获取到所有的信息
     > GET /user
-  * 默认分页的大小是20个数据，如果你想修改这个默认值，可以添加limit的值，格式如下:
+  * 默认分页的大小是20个数据，如果你想修改这个默认值，可以添加limit的值，格式如下:  
     > GET /user?limit=50
-  * 默认页面是第一页，如果你想修改当前的页面数，可以指定page值，格式如下:
+  * 默认页面是第一页，如果你想修改当前的页面数，可以指定page值，格式如下:  
     > GET /user?page=3
-  * 在名词后接一个数值或者一个ID可以获得一个数据项，这时limit与page无效，会被忽略。
-    > GET /user/1  
-    > GET /user/1?limit=50&page=10
+  * 在名词后接一个数值或者一个ID可以获得一个数据项，这时limit与page无效，会被忽略。  
+    > GET /user/1   
+    > GET /user/1?limit=50&page=10  
 
 7. 所有使用POST方法的API必须以英文动词开头，比如可以修改数据的create/update/remove，但是不能是get/list/show这样的不会修改数据的动词。
     简单示例如下:
