@@ -1,5 +1,5 @@
 [[中文版](https://github.com/calidion/egg/blob/master/README.md)]
-[[English Version](https://github.com/calidion/egg/blob/master/README.end.md)]
+[[English Version](https://github.com/calidion/egg/blob/master/README.en.md)]
 
 
 # 蛋蛋 API: 一个简单的类RESTful API规范
