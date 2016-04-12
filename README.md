@@ -2,7 +2,7 @@
 [[English Version](https://github.com/calidion/egg/blob/master/README.end.md)]
 
 
-# 蛋蛋 API: 一个Nodejs的简单的类RESTful API规范
+# 蛋蛋 API: 一个简单的类RESTful API规范
 
 蛋蛋API是一个更简单的基于HTTP的API规则。
 蛋蛋API的目标是降低RESTful API的复杂性。
