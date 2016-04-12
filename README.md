@@ -47,19 +47,19 @@
     > GET /user?page=3
   * 在名词后接一个数值或者一个ID可以获得一个数据项，这时limit与page无效，会被忽略。  
       
-     > GET /user/1
+     > GET /user/1  
      > GET /user/1?limit=50&page=10  
 
 7. 所有使用POST方法的API地址与GET必须一致。添加action方法指示当前操作的目的，如果create/update/delete/remove等。
     简单示例如下:
-    > POST /user/1?action=update
-    > POST /user?action=create  
-    > POST /user/?action=remove  //删除全部
-    > POST /user/1?action=remove  //删除1个
+    > POST /user/1?action=update  
+    > POST /user?action=create    
+    > POST /user/?action=remove  //删除全部  
+    > POST /user/1?action=remove  //删除1个  
 
 8. POST格式需要跟表单提交的格式相同。禁止提交json/xml文件。
-    > POST /user?action=create
-    > ...
+    > POST /user?action=create  
+    > ...  
     > 
     > 
     > name=aaa&password=asdfsf
