@@ -30,12 +30,12 @@
 
 ## 蛋蛋API规范
 
-1. 蛋蛋API只将HTTP的GET/POST方法作为基本方式.
-2. GET方法用于从服务器获取数据.
-3. POST方法用于向服务器发送数据.
-4. 任何使用GET方法的API将不会改变除日志之外的用户信息.
-5. 任何使用POST方法的API将会改变用户的状态，信息或者数据.
-6. 所有使用GET方法的API必须以英文名词开关，比如user/admin.  
+1. 蛋蛋API只将HTTP的GET/POST方法作为基本方式。
+2. GET方法用于从服务器获取数据。
+3. POST方法用于向服务器发送数据。
+4. 任何使用GET方法的API将不会改变除日志之外的用户信息。
+5. 任何使用POST方法的API将会改变用户的状态，信息或者数据。
+6. 所有使用GET方法的API必须以英文名词开关，比如user/admin。  
   * 只写一个名词表示你需要获取到所有的信息  
     
     > GET /user
@@ -64,15 +64,17 @@
     > 
     > name=aaa&password=asdfsf
 9. 所以的API返回JSON数据。
-10. 所有的JSON数据包括以下字段：:
+10. 所有的JSON数据包括以下字段：
 
     | 字段名 | 描述 |
     | --- | --- |
     | code | 错误代码|
+    | name | 错误名称|
     | message | 错误消息|
     | data | 返回数据 |
 
-11. 错误以[errorable](https://github.com/calidion/errorable)方式定义，由[errorable-common](https://github.com/Errorable/common)库实现.
+11. 错误实现  
+    参考以[errorable](https://github.com/calidion/errorable)方式定义，[errorable-common](https://github.com/Errorable/common)库方式的实现。
 12. 参数保留字
   * action:  表示操作动作
   * page: 表示当前页
