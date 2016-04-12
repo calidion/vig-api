@@ -10,7 +10,7 @@
 2. GET方法用于从服务器获取数据.
 3. POST方法用于向服务器发送数据.
 4. 任何使用GET方法的API将不会改变除日志之外的用户信息.
-5. 任何使用POST方法的API将会改变用户的状态，信息或者数据
+5. 任何使用POST方法的API将会改变用户的状态，信息或者数据.
 6. 所有使用GET方法的API必须以英文名词开关，比如user/admin.  
   * 只写一个名词表示你需要获取到所有的信息  
     
@@ -26,14 +26,15 @@
      > GET /user/1
      > GET /user/1?limit=50&page=10  
 
-7. 所有使用POST方法的API必须以英文动词开头，比如可以修改数据的create/update/remove，但是不能是get/list/show这样的不会修改数据的动词。
+7. 所有使用POST方法的API地址与GET必须一致。添加action方法指示当前操作的目的，如果create/update/delete/remove等。
     简单示例如下:
-    > POST /create/user  
-    > POST /update/user  
-    > POST /remove/user  
+    > POST /user/1?action=update
+    > POST /user?action=create  
+    > POST /user/?action=remove  //删除全部
+    > POST /user/1?action=remove  //删除1个
 
 8. POST格式需要跟表单提交的格式相同。禁止提交json/xml文件。
-    > POST /create/user
+    > POST /user?action=create
     > ...
     > 
     > 
@@ -47,4 +48,10 @@
     | message | 错误消息|
     | data | 返回数据 |
 
-11. 错误代在[errorable](https://github.com/calidion/errorable)和它的[common](https://github.com/Errorable/common)库定义.
+11. 错误以[errorable](https://github.com/calidion/errorable)方式定义，由[errorable-common](https://github.com/Errorable/common)库实现.
+12. 参数保留字
+* action:  表示操作动作
+* page: 表示当前页
+* limit: 表示每个分页大小
+* token: 表示服务器的token
+ 后续还会不断的增加
