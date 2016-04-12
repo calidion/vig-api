@@ -69,8 +69,8 @@
 
 11. 错误以[errorable](https://github.com/calidion/errorable)方式定义，由[errorable-common](https://github.com/Errorable/common)库实现.
 12. 参数保留字
-* action:  表示操作动作
-* page: 表示当前页
-* limit: 表示每个分页大小
-* token: 表示服务器的token
- 后续还会不断的增加
+  * action:  表示操作动作
+  * page: 表示当前页
+  * limit: 表示每个分页大小
+  * token: 表示服务器的token    
+  后续还会不断的增加
