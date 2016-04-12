@@ -1,5 +1,5 @@
-[[English Version](https://github.com/calidion/egg/blob/master/README.md)]
-[[中文版](https://github.com/calidion/egg/blob/master/README.zh-CN.md)]
+[[中文版](https://github.com/calidion/egg/blob/master/README.md)]
+[[English Version](https://github.com/calidion/egg/blob/master/README.end.md)]
 
 
 # 蛋蛋 API: 一个Nodejs的简单API规范
