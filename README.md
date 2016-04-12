@@ -2,9 +2,28 @@
 [[English Version](https://github.com/calidion/egg/blob/master/README.end.md)]
 
 
-# 蛋蛋 API: 一个Nodejs的简单API规范
+# 蛋蛋 API: 一个Nodejs的简单的类RESTful API规范
+
 蛋蛋API是一个更简单的基于HTTP的API规则。
-蛋蛋API的目标是降低RESTful API的复杂性
+蛋蛋API的目标是降低RESTful API的复杂性。
+
+## RESTful的问题
+1. 使用过多的HTTP方法，很多方法大部分程序员并不熟悉
+2. 虽然使用了很多的HTTP方法，但是这些方法跟现实比又显得不够用。
+3. PUT/POST等方法语义接近，区分困难
+4. RESTful不容易理解，大部分程序员没有真正的理解RESTful API
+5. 过于学术化不实用
+
+## 为什么要定义蛋蛋API？
+
+1. 降低门槛，简单化
+2. 更加符合实际，好操作，好使用，更接近人的使用直觉
+3. 吸引RESTful里精华的部分
+4. 去掉RESTful里不实用的部分
+5. 可以自定义更多的动作
+6. 吸收RESTful无状态，资源定位等理念的优点
+
+## 蛋蛋API规范
 
 1. 蛋蛋API只将HTTP的GET/POST方法作为基本方式.
 2. GET方法用于从服务器获取数据.
