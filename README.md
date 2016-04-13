@@ -50,12 +50,19 @@
      > GET /user/1  
      > GET /user/1?limit=50&page=10  
 
-7. 所有使用POST方法的API地址与GET必须一致。添加action方法指示当前操作的目的，如果create/update/delete/remove等。
-    简单示例如下:
+7. 所有使用POST方法的API地址与GET必须一致。  
+    * 添加action方法指示当前操作的目的，如果create/update/delete/remove等。  
+    简单示例如下:  
     > POST /user/1?action=update  
     > POST /user?action=create    
     > POST /user/?action=remove  //删除全部  
     > POST /user/1?action=remove  //删除1个  
+   * 也可以将action作为POST的数据的一部分提交到服务器，如    
+    > POST /user  
+    > ...    
+    >    
+    >     
+    > <code>action=create</code>&name=aaa&password=asdfsf   
 
 8. POST格式需要跟表单提交的格式相同。禁止提交json/xml文件。
     > POST /user?action=create  
