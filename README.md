@@ -63,7 +63,7 @@
     > 
     > 
     > name=aaa&password=asdfsf
-9. 所以的API返回JSON数据。
+9. 所有的API返回JSON数据。
 10. 所有的JSON数据包括以下字段：
 
     | 字段名 | 描述 |
