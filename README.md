@@ -50,28 +50,24 @@
      > GET /user/1  
      > GET /user/1?limit=50&page=10  
 
-7. 所有使用POST方法的API地址与GET必须一致。  
-    * 添加action方法指示当前操作的目的，如果create/update/delete/remove等。  
-    简单示例如下:  
-    > POST /user/1?action=update  
-    > POST /user?action=create    
-    > POST /user/?action=remove  //删除全部  
-    > POST /user/1?action=remove  //删除1个  
+7. 所有使用POST方法的API地址与GET必须一致。
+8. 在POST中使用action字段表示方法。
    * 也可以将action作为POST的数据的一部分提交到服务器，如    
     > POST /user  
     > ...    
     >    
     >     
-    > <code>action=create</code>&name=aaa&password=asdfsf   
+    > <code>action=create</code>&name=aaa&password=asdfsf  
 
-8. POST格式需要跟表单提交的格式相同。禁止提交json/xml文件。
+
+9. POST格式需要跟表单提交的格式相同。禁止提交json/xml文件。
     > POST /user?action=create  
     > ...  
     > 
     > 
     > name=aaa&password=asdfsf
-9. 所有的API返回JSON数据。
-10. 所有的JSON数据包括以下字段：
+10. 所有的API返回JSON数据。
+11. 所有的JSON数据包括以下字段：
 
     | 字段名 | 描述 |
     | --- | --- |
@@ -80,11 +76,11 @@
     | message | 错误消息|
     | data | 返回数据 |
 
-11. 错误实现  
+12. 错误实现  
     参考以[errorable](https://github.com/calidion/errorable)方式定义，[errorable-common](https://github.com/Errorable/common)库方式的实现。
-12. 参数保留字
-  * action:  表示操作动作
-  * page: 表示当前页
-  * limit: 表示每个分页大小
+13. 参数保留字
+  * action:  表示操作动作,限用于POST  
+  * page: 表示当前页  
+  * limit: 表示每个分页大小  
   * token: 表示服务器的token    
  后续还会不断的增加
