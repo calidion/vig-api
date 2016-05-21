@@ -67,7 +67,7 @@
     > 
     > 
     > name=aaa&password=asdfsf
-10. 所有的API返回JSON数据。
+10. 所有的API返回JSON数据，也就是将资源与API分类。
 11. 所有的JSON数据包括以下字段：
 
     | 字段名 | 描述 | 备注 |
