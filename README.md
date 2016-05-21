@@ -70,12 +70,12 @@
 10. 所有的API返回JSON数据。
 11. 所有的JSON数据包括以下字段：
 
-    | 字段名 | 描述 |
-    | --- | --- |
-    | code | 错误代码|
-    | name | 错误名称|
-    | message | 错误消息|
-    | data | 返回数据 |
+    | 字段名 | 描述 | 备注 |
+    | --- | --- | --- |
+    | code | 错误代码 | 由Errorable Common包规范，当且仅当code为0时表示成功|
+    | name | 错误名称|    |
+    | message | 错误消息|    |
+    | data | 返回数据 |    |
 
 12. 错误实现  
     参考以[errorable](https://github.com/calidion/errorable)方式定义，[errorable-common](https://github.com/Errorable/common)库方式的实现。
