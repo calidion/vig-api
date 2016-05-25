@@ -83,8 +83,88 @@
 12. 错误实现  
     参考以[errorable](https://github.com/calidion/errorable)方式定义，[errorable-common](https://github.com/Errorable/common)库方式的实现。
 
-13. 参数保留字
+13. 参数保留字 （主要用于query）
   * action:  表示操作动作,限用于POST  
   * page: 表示当前页  
   * limit: 表示每个分页大小  
-  * token: 表示服务器的token    
+  * token: 表示服务器的token   
+  * state: 表示资料的状态
+  * from: 表示开始时间
+  * to: 表示结束时间
+  
+## URI的query参数规范
+
+在蛋蛋API里完全将Query当成是查询，但是除去了ID查询。
+因为通过URI就可以定位ID查询的结果。
+
+在URI中第一个?号后的参数称为query参数，一般的形式是name=value&name1=value1这样的。
+在这里，我们基于HTTP的query，实现对数据的查询。
+
+### 分页
+
+参数名page表示页码，limit表示每页数据量。
+
+所以获取第5页，每页50个数据的query是这样的：
+
+```
+uri?page=5&limit=50
+```
+默认值： page=1, limit=20。
+
+### 会话
+
+如果蛋蛋API的会话是基于token的。token将会被放在query里。
+
+代码示例：
+```
+uri?token=xxx
+```
+
+### 状态查询
+
+每个业务资源都是可以有状态的，所以我们提供了state来表示状态。
+建议所有的状态都使用state来表达。同时状态值使用大写字符串来表达。
+
+代码示例：
+```
+uri?state=GOOD
+```
+
+### 时间段匹配
+
+在query里面提供了时间查询字串：from, to。
+可以单独使用，也可以混合使用。查询格式是 YYYY-MM-DD HH:MM:SS。
+可以不断减少精确度，直到只有年。
+所以可以是 
+YYYY-MM-DD HH:MM,  YYYY-MM-DD HH,  YYYY-MM-DD,  YYYY-MM,  YYYY
+这几种格式。
+月日不足10时需要使用0补足。
+小时采用24小时制。
+
+代码示例：
+```
+uri?from=1998-09-01&to=2000-01-20 20:10
+```
+
+## URI的POST参数规范
+
+由于蛋蛋API采用POST来改变数据，所以我们对POST数据作出如下规范
+1. 提交的数据要与HTTP的表单提交一致
+2. 以action字段取代RESTful APIs里面的HTTP方法
+3. 所以业务变更必须通过类HTTP的表单提交。
+4. 不能将业务逻辑写在文件里，通过文件提交。比如将业务逻辑写到JSON文件里提交到服务器。
+5. 所有的变更参数必须通过POST提交。
+
+一个POST示例：
+
+```
+
+POST   /users
+
+
+action=register&name=aaa&password=asdfsf
+```
+
+
+
+
