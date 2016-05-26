@@ -113,7 +113,7 @@ uri?page=5&limit=50
 
 ### 会话
 
-如果蛋蛋API的会话是基于token的。token将会被放在query里。
+如果蛋蛋API的会话是基于token的。token将会被放在query里。同时要求token必须是有时效性的，一般不超过1个小时。
 
 代码示例：
 ```
@@ -140,6 +140,8 @@ YYYY-MM-DD HH:MM,  YYYY-MM-DD HH,  YYYY-MM-DD,  YYYY-MM,  YYYY
 这几种格式。
 月日不足10时需要使用0补足。
 小时采用24小时制。
+
+这里的时间是查询时间，同时时区由服务器时区决定。
 
 代码示例：
 ```
