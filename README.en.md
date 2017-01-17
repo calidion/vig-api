@@ -2,7 +2,7 @@
 [[English Version](https://github.com/calidion/egg/blob/master/README.en.md)]
 
 
-# Egg API: A simple rule set for RESTful-like APIs 
+# Vig API: A simple rule set for RESTful-like APIs 
 
 Is is a simpler rule set for HTTP based APIs, it tries to reduce the complexity that the RESTful APIs introduced.
 
@@ -14,7 +14,7 @@ Is is a simpler rule set for HTTP based APIs, it tries to reduce the complexity 
 4. The way the RESTful apis operate resources through HTTP methods are vague and hard to understand, it sucks a lot of programmers, makes it hard to be realized.
 5. Too academic, not practical.
 
-## Why Egg API
+## Why Vig API
 
 1. To lower the complexity, to simplify the way an API defined..
 2. More practical, more operational, more intuitive.
