@@ -2,10 +2,10 @@
 [[English Version](https://github.com/calidion/egg/blob/master/README.en.md)]
 
 
-# 蛋蛋 API: 一个简单的类RESTful API规范
+# vig API: 一个简单的类RESTful API规范
 
-蛋蛋API是一个更简单的基于HTTP的API规则。
-蛋蛋API的目标是降低RESTful API的复杂性。
+vig API是一个更简单的基于HTTP的API规则。
+vig API的目标是降低RESTful API的复杂性。
 
 ## RESTful API的问题
 
@@ -17,7 +17,7 @@
 6. 将网络底层协议与应用的API结合会造成协议规范与应用API规范的混乱
 7. 无状态对于非用户的交互机制来说是方便的，但是对于用户交互来说显得有点繁琐。
 
-## 为什么要定义蛋蛋API？
+## 为什么要定义vig API？
 
 1. 降低门槛，简单化
 2. 更加符合实际，好操作，好使用，更接近人的使用直觉
@@ -36,9 +36,9 @@
 2. 大公司，新手团队
 3. 所有喜欢简单、实用、有效的团队
 
-## 蛋蛋API规范
+## vig API规范
 
-1. 蛋蛋API只将HTTP的GET/POST方法作为基本方式。
+1. vig API只将HTTP的GET/POST方法作为基本方式。
 2. GET方法用于从服务器获取数据。
 3. POST方法用于向服务器发送数据。
 4. 任何使用GET方法的API将不会改变除日志之外的用户信息。
@@ -96,7 +96,7 @@
   
 ## URI的query参数规范
 
-在蛋蛋API里完全将Query当成是查询，但是除去了ID查询。
+在vig API里完全将Query当成是查询，但是除去了ID查询。
 因为通过URI就可以定位ID查询的结果。
 
 在URI中第一个?号后的参数称为query参数，一般的形式是name=value&name1=value1这样的。
@@ -115,7 +115,7 @@ uri?page=5&limit=50
 
 ### 会话
 
-如果蛋蛋API的会话是基于token的。token将会被放在query里。同时要求token必须是有时效性的，一般不超过1个小时。
+如果vig API的会话是基于token的。token将会被放在query里。同时要求token必须是有时效性的，一般不超过1个小时。
 
 代码示例：
 ```
@@ -152,7 +152,7 @@ uri?from=1998-09-01&to=2000-01-20 20:10
 
 ## URI的POST参数规范
 
-由于蛋蛋API采用POST来改变数据，所以我们对POST数据作出如下规范：
+由于vig API采用POST来改变数据，所以我们对POST数据作出如下规范：
 
 1. 提交的数据要与HTTP的表单提交一致  
 2. 以action字段取代RESTful APIs里面的HTTP方法  
