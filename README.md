@@ -5,6 +5,7 @@
 # vig API: 一个基于业务的API规范
 
 RESTful API是基于资源定位的API规范
+
 GraphQL是基于复杂业务的API规范
 
 而vig API规范是针对相对简单的业务API的规范
@@ -31,13 +32,16 @@ GraphQL是基于复杂业务的API规范
 7. 不只是资源表达的API，也是业务表达的API
 8. 不建议将资源放在API里。（比如下载个WORD文档或者图片什么的）
 9. 所有的资源以静态文件的形式保存，或者以RESTful APIs形式提供
-10. Egg API只负责提供业务资源，而不是文件资源，不需要更多的MIME支持。
-11. Egg API可以与RESTful APIs协作共同提供服务
+10. Vig API只负责提供业务资源，而不是文件资源，不需要更多的MIME支持。
+11. Vig API可以与RESTful APIs协作共同提供服务
 
 ## 适用对象
+
 1. 小公司，敏捷团队
 2. 大公司，新手团队
 3. 所有喜欢简单、实用、有效的团队
+4. 业务相对简单的场景
+
 
 ## vig API规范
 
@@ -63,7 +67,9 @@ GraphQL是基于复杂业务的API规范
      > GET /users/1?limit=50&page=10  
 
 7. 所有使用POST方法的API地址与GET必须一致。
+
 8. 在POST中使用action字段表示方法。
+
    * 也可以将action作为POST的数据的一部分提交到服务器，如    
     > POST /users  
     > ...    
@@ -89,6 +95,7 @@ GraphQL是基于复杂业务的API规范
     参考以[errorable](https://github.com/calidion/errorable)方式定义，[errorable-common](https://github.com/Errorable/common)库方式的实现。
 
 13. 参数保留字 （主要用于query）
+
   * action:  表示操作动作,限用于POST  
   * page: 表示当前页  
   * limit: 表示每个分页大小  
