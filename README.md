@@ -1,11 +1,14 @@
-[[中文版](https://github.com/calidion/egg/blob/master/README.md)]
-[[English Version](https://github.com/calidion/egg/blob/master/README.en.md)]
+[[中文版](./README.md)]
+[[English Version](./README.en.md)]
 
 
-# vig API: 一个简单的类RESTful API规范
+# vig API: 一个基于业务的API规范
 
-vig API是一个更简单的基于HTTP的API规则。
-vig API的目标是降低RESTful API的复杂性。
+RESTful API是基于资源定位的API规范
+GraphQL是基于复杂业务的API规范
+
+而vig API规范是针对相对简单的业务API的规范
+
 
 ## RESTful API的问题
 
@@ -24,7 +27,7 @@ vig API的目标是降低RESTful API的复杂性。
 3. 吸引RESTful里精华的部分
 4. 去掉RESTful里不实用的部分
 5. 可以自定义更多的动作
-6. 支持COOKIE、SESSION、TOKEN等多种形态
+6. 支持COOKIE、SESSION、TOKEN等多种形态，而不是死板的只能使用token
 7. 不只是资源表达的API，也是业务表达的API
 8. 不建议将资源放在API里。（比如下载个WORD文档或者图片什么的）
 9. 所有的资源以静态文件的形式保存，或者以RESTful APIs形式提供
