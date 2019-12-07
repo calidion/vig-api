@@ -2,13 +2,13 @@
 [[English Version](./README.en.md)]
 
 
-# vig API: 一个基于业务的API规范
+# VIG API: 一个基于业务的API规范
 
 RESTful API是基于资源定位的API规范
 
 GraphQL是基于复杂业务的API规范
 
-而vig API规范是针对相对简单的业务API的规范
+而VIG API规范是针对相对简单的业务的API规范
 
 
 ## RESTful API的问题
@@ -21,7 +21,7 @@ GraphQL是基于复杂业务的API规范
 6. 将网络底层协议与应用的API结合会造成协议规范与应用API规范的混乱
 7. 无状态对于非用户的交互机制来说是方便的，但是对于用户交互来说显得有点繁琐。
 
-## 为什么要定义vig API？
+## 为什么要定义VIG API？
 
 1. 降低门槛，简单化
 2. 更加符合实际，好操作，好使用，更接近人的使用直觉
@@ -43,9 +43,9 @@ GraphQL是基于复杂业务的API规范
 4. 业务相对简单的场景
 
 
-## vig API规范
+## VIG API规范
 
-1. vig API只将HTTP的GET/POST方法作为基本方式。
+1. VIG API只将HTTP的GET/POST方法作为基本方式。
 2. GET方法用于从服务器获取数据。
 3. POST方法用于向服务器发送数据。
 4. 任何使用GET方法的API将不会改变除日志之外的用户信息。
@@ -103,10 +103,11 @@ GraphQL是基于复杂业务的API规范
   * state: 表示资料的状态
   * from: 表示开始时间
   * to: 表示结束时间
+  * output: 表示输出类型，可选择的值有: `xml`,  `html`, `json`，默认输出`html`
   
 ## URI的query参数规范
 
-在vig API里完全将Query当成是查询，但是除去了ID查询。
+在VIG API里完全将Query当成是查询，但是除去了ID查询。
 因为通过URI就可以定位ID查询的结果。
 
 在URI中第一个?号后的参数称为query参数，一般的形式是name=value&name1=value1这样的。
@@ -125,7 +126,7 @@ uri?page=5&limit=50
 
 ### 会话
 
-如果vig API的会话是基于token的。token将会被放在query里。同时要求token必须是有时效性的，一般不超过1个小时。
+如果VIG API的会话是基于token的。token将会被放在query里。同时要求token必须是有时效性的，一般不超过1个小时。
 
 代码示例：
 ```
@@ -162,7 +163,7 @@ uri?from=1998-09-01&to=2000-01-20 20:10
 
 ## URI的POST参数规范
 
-由于vig API采用POST来改变数据，所以我们对POST数据作出如下规范：
+由于VIG API采用POST来改变数据，所以我们对POST数据作出如下规范：
 
 1. 提交的数据要与HTTP的表单提交一致  
 2. 以action字段取代RESTful APIs里面的HTTP方法  
